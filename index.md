@@ -217,7 +217,6 @@ Only the **behavior function** should be modified.
 > If you can understand robot behavior without reading hardware code,
 > the program is well designed.
 [Download Arduino Code](behavior_robot.ino)
-````
 
 ---
 
