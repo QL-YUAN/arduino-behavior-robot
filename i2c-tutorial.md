@@ -159,7 +159,7 @@ int z = Wire.read() | (Wire.read() << 8);
 ```
 
 **Explanation:**
-# 🧮 Reading Multi-Byte Data from I²C Devices
+#### 🧮 Reading Multi-Byte Data from I²C Devices
 
 When using I²C sensors like the **ADXL345 accelerometer**, you often need to read **16-bit values** that are split into two 8-bit registers: a **Low Byte** and a **High Byte**.  
 
