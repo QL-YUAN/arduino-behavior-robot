@@ -54,6 +54,7 @@ This structure is equivalent to a **Selector** in a behavior tree.
 | IN3 | 10 |
 | IN4 | 11 |
 
+![Pinout Diagram](assets/L298N.png)
 - Connect motors to OUT1–OUT4
 - Remove ENA and ENB jumpers
 - Motor power must come from an external battery
