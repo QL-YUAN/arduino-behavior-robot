@@ -159,7 +159,70 @@ int z = Wire.read() | (Wire.read() << 8);
 ```
 
 **Explanation:**
+# 🧮 Reading Multi-Byte Data from I²C Devices
 
+When using I²C sensors like the **ADXL345 accelerometer**, you often need to read **16-bit values** that are split into two 8-bit registers: a **Low Byte** and a **High Byte**.  
+
+For example, the X-axis acceleration is stored in:
+
+- `DATAX0` → Low byte (0x32)
+- `DATAX1` → High byte (0x33)
+
+---
+
+1️⃣ The Code
+
+```cpp
+int x = Wire.read() | (Wire.read() << 8);
+````
+
+---
+
+2️⃣ Step-by-Step Explanation
+
+#### Step 1: Read the low byte
+
+```cpp
+Wire.read()
+```
+
+* Reads the first byte from the I²C device (DATAX0)
+* Example: `0x34` → 52 decimal
+
+#### Step 2: Read the high byte and shift
+
+```cpp
+Wire.read() << 8
+```
+
+* Reads the second byte from the device (DATAX1)
+* Shifts it 8 bits to the left to **become the high byte**
+* Example: `0x12 << 8` → `0x1200` → 4608 decimal
+
+#### Step 3: Combine using bitwise OR `|`
+
+```cpp
+0x34 | 0x1200 = 0x1234
+```
+
+✅ Now `x` contains the full **16-bit signed value** from the sensor.
+
+---
+
+3️⃣ Why Use Bitwise OR?
+
+* Each byte is 8 bits. A 16-bit value = High Byte + Low Byte
+* OR-ing combines them without overwriting each other:
+
+```
+0x1200
+OR
+0x0034
+=
+0x1234
+```
+
+---
 | Register    | Purpose                                     |
 | ----------- | ------------------------------------------- |
 | `0x32`      | X-axis LSB (auto-increments for next bytes) |
