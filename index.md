@@ -55,6 +55,10 @@ This structure is equivalent to a **Selector** in a behavior tree.
 | IN4 | 11 |
 
 ![Pinout Diagram](assets/L298N.png)
+<p align="center">
+  <img src="assets/L298N.png" width="700"><br>
+  <em>Figure 1: Pinout Diagram</em>
+</p>
 - Connect motors to OUT1–OUT4
 - Remove ENA and ENB jumpers
 - Motor power must come from an external battery
@@ -343,5 +347,5 @@ int readDistanceCM() {
 1. lakshyajhalani56, L298n Motor driver Arduino | Motors | Motor Driver | L298n
    https://projecthub.arduino.cc/lakshyajhalani56/l298n-motor-driver-arduino-motors-motor-driver-l298n-7e1b3b
 
-
-
+2. Isaac100
+   https://projecthub.arduino.cc/Isaac100/getting-started-with-the-hc-sr04-ultrasonic-sensor-7cabe1
