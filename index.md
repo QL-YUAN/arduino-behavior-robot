@@ -337,6 +337,10 @@ int readDistanceCM() {
   return distance;
 }
 ````
+## References
+
+1. lakshyajhalani56, L298n Motor driver Arduino | Motors | Motor Driver | L298n
+   https://projecthub.arduino.cc/lakshyajhalani56/l298n-motor-driver-arduino-motors-motor-driver-l298n-7e1b3b
 
 
 
