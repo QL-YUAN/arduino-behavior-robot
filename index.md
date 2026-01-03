@@ -342,9 +342,10 @@ int readDistanceCM() {
   return distance;
 }
 ````
-## Next Tutorials
+## More Tutorials
 
 - [Arduino I²C Tutorial](i2c-tutorial.md)
+- [ADXL345Tutorial](ADXL345-tutorial.md)
 ## References
 
 1. lakshyajhalani56, L298n Motor driver Arduino | Motors | Motor Driver | L298n
